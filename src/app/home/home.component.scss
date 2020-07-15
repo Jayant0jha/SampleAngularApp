@@ -1,0 +1,15 @@
+.btn-primary {
+    width: 120px;
+    float: right;
+    margin-right: 30px;
+}
+
+table.table tbody tr td,
+table.table thead tr th,
+table.table thead {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    text-align: center;
+}

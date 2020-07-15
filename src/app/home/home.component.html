@@ -1,0 +1,94 @@
+<nav *ngIf="subscribed" class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand">{{user[0].role}} Panel</a>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav mr-auto"></ul>
+    <ul class="navbar-nav">
+      <li *ngIf="auth.isSignedIn" class="nav-item">
+        <a class="nav-link btn btn-warning text-dark" routerLink="/signin" (click)=LogOut()>Logout</a>
+      </li>
+    </ul>
+  </div>
+
+</nav><br>
+
+<div class="row">
+  <div class="col-lg-9"></div>
+  <div class="col-lg-3">
+    <div class="btn btn-primary" (click)=addStudent()>Add Student</div>
+  </div>
+</div><br>
+
+<div class="row">
+  <div class="col-lg-4">
+  <div *ngIf="subscribed" class="card mx-5" style="width: 20rem;">
+    <img [src]="this.user[0].imageurl" class="card-img-top">
+
+        <div class="card-body">
+          <div>
+            <p class="card-text"><b>Name: </b>{{user[0].name}}</p>
+            <p class="card-text"><b>Gender:</b>{{user[0].gender}}</p>
+            <p class="card-text"><b>Role:</b>{{user[0].role}}</p>
+            <p class="card-text"><b>Email Address:</b>{{user[0].email}}</p>
+          </div>
+        </div>
+  </div>
+  </div>
+  <div class="col-lg-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Age</th>
+          <th scope="col">Email Id</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let stu of student; let i=index">
+          <td>{{stu.name}}</td>
+          <td>{{stu.age}}</td>
+          <td>{{stu.email}}</td>
+          <td><button class="btn btn-danger mx-3"><i class="fa fa-trash" style="color:#000000" (click)="delStudent(stu)"></i></button></td>
+        </tr>
+      </tbody>
+    </table></div>
+
+    <div *ngIf=isFormVisible class="col-lg-4">
+    <div class="container">
+      <div class="d-flex justify-content-center h-100">
+        <div class="card">
+          <div class="card-body">
+            <form>
+
+              <div class="form-group">
+                <label>Name:</label><br>
+                <input [(ngModel)]="newStudent.name" type="text" class="form-control" name="name">
+              </div>
+
+              <div class="form-group">
+                <label>Age:</label><br>
+                <input [(ngModel)]="newStudent.age" type="number" class="form-control" name="age">
+              </div>
+
+              <div class="form-group">
+                  <label for="exampleInputEmail1">Email address:</label><br>
+                <input [(ngModel)]="newStudent.email" type="email" class="form-control" name="email">
+              </div>
+
+              <div class="form-group">
+                <button (click)="addNewStudent()" type="submit" class="btn float-right btn-success">Add Student</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+
+
+</div>

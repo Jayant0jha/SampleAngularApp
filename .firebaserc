@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sampletask-44397": {
+      "hosting": {
+        "SampleTask": [
+          "sampletask-44397"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sampletask-44397"
+  }
+}
