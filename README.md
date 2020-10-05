@@ -1,4 +1,5 @@
-# SampleTask
+# Sample Firebase Authentication with Firestore read and write
+This is a sample application implementing firebase auth with read and write functions to Firestore. This can be a basic setup required to build any application with auth and firestore, and can be used as a git submodule or a git subtree into your app.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 
