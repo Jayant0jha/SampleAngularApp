@@ -22,6 +22,7 @@ import {
 import { environment } from '../environments/environment';
 import 'firebase/firestore';
 import { HomeComponent } from './home/home.component';
+import { TestComponent } from './test/test.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     SigninComponent,
     SignupComponent,
-    HomeComponent
+    HomeComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
